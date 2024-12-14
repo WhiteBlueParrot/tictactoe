@@ -24,7 +24,7 @@ def check_status(grid, current_player):
         status = f'{current_player} WON!'
     elif grid[0][0] == grid[1][1] == grid[2][2] and grid[0][0] != '-' or \
             grid[0][2] == grid[1][1] == grid[2][0] and grid[0][2] != '-':  # 3 in diagonal
-        return f'{current_player} WON!'
+        status = f'{current_player} WON!'
     elif not any('-' in row for row in grid):  # if all spaces are either 'o' or 'x'
         status = 'Draw!'
     else:
